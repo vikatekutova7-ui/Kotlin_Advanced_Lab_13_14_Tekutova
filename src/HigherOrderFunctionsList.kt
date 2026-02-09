@@ -77,9 +77,14 @@ fun main(){
 //    crunchyMenu.forEach {
 //        println("${it.name} - $${it.price}")
 //    }
-    val totalPrice = cookies.fold(0.0) { total, cookie ->
-        total + cookie.price
+//    val totalPrice = cookies.fold(0.0) { total, cookie ->
+//        total + cookie.price
+//    }
+//    println("Total price: $${totalPrice}")
+    val alphabeticalMenu = cookies.sortedBy { it.name }
+    println("Меню в алфавитном порядке:")
+    alphabeticalMenu.forEach {
+        println(it.name)
     }
-    println("Total price: $${totalPrice}")
 
 }
